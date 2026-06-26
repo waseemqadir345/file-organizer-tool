@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>File Organizer & Batch Renamer</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+  body {
+    background: linear-gradient(135deg, #0EA5E9 0%, #14B8A6 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  .card {
+    background: #ffffff;
+    border-radius: 20px;
+    max-width: 760px;
+    width: 100%;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    overflow: hidden;
+  }
+  .header {
+    background: linear-gradient(135deg, #0EA5E9, #14B8A6);
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+  }
+  .header .icon { font-size: 56px; }
+  .header h1 { font-size: 28px; margin: 12px 0 6px; }
+  .header p { font-size: 15px; opacity: 0.92; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-top: 14px;
+  }
+  .body { padding: 36px 40px; }
+  .section-title {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #0D9488;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+  .feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ECFEFF;
+    padding: 14px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #1f2937;
+  }
+  .feature .check { color: #16A34A; font-weight: bold; font-size: 18px; }
+
+  /* Before / After folder view */
+  .before-after {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 30px;
+    align-items: stretch;
+  }
+  .ba-box {
+    flex: 1;
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .before { background: #FEF2F2; border: 2px dashed #FCA5A5; }
+  .after  { background: #F0FDFA; border: 2px solid #5EEAD4; }
+  .ba-box .label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+  .before .label { color: #DC2626; }
+  .after .label  { color: #0D9488; }
+  .file-line { font-size: 13px; color: #374151; padding: 3px 0; }
+  .arrow { display: flex; align-items: center; font-size: 26px; color: #0EA5E9; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    background: #CCFBF1;
+    color: #0D9488;
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .footer {
+    background: #111827;
+    color: #fff;
+    text-align: center;
+    padding: 18px;
+    font-size: 13px;
+  }
+  .footer span { color: #5EEAD4; font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <div class="icon">📁</div>
+      <h1>File Organizer &amp; Batch Renamer</h1>
+      <p>Organize hundreds of messy files in seconds — one command</p>
+      <div class="badge">🐍 Python · Automation · File Management</div>
+    </div>
+
+    <div class="body">
+      <div class="section-title">What It Does</div>
+      <div class="features">
+        <div class="feature"><span class="check">✓</span> Sorts files by type</div>
+        <div class="feature"><span class="check">✓</span> Batch-renames with rules</div>
+        <div class="feature"><span class="check">✓</span> Removes duplicate files</div>
+        <div class="feature"><span class="check">✓</span> Handles 500+ files instantly</div>
+        <div class="feature"><span class="check">✓</span> No extra installs needed</div>
+        <div class="feature"><span class="check">✓</span> Safe &amp; reliable</div>
+      </div>
+
+      <div class="section-title">Before → After</div>
+      <div class="before-after">
+        <div class="ba-box before">
+          <div class="label">Before (messy)</div>
+          <div class="file-line">📄 invoice.pdf</div>
+          <div class="file-line">🖼️ IMG_2931.jpg</div>
+          <div class="file-line">🎬 clip.mp4</div>
+          <div class="file-line">📄 notes.txt</div>
+          <div class="file-line">🖼️ photo (1).jpg</div>
+        </div>
+        <div class="arrow">→</div>
+        <div class="ba-box after">
+          <div class="label">After (organized)</div>
+          <div class="file-line">📁 Documents/</div>
+          <div class="file-line">📁 Images/</div>
+          <div class="file-line">📁 Videos/</div>
+          <div class="file-line">✅ duplicates removed</div>
+          <div class="file-line">✅ all sorted neatly</div>
+        </div>
+      </div>
+
+      <div class="section-title">Tech &amp; Skills</div>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">Automation</span>
+        <span class="tag">File Management</span>
+        <span class="tag">Scripting</span>
+        <span class="tag">OS Automation</span>
+      </div>
+    </div>
+
+    <div class="footer">
+      Delivered by <span>M Waseem Q</span> · Python Developer &amp; Automation Specialist
+    </div>
+  </div>
+</body>
+</html>
